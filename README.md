@@ -14,3 +14,7 @@ Nous sommes [Max Bonnici](https://github.com/MaxBonnici), [Doug](https://github.
 # Status actions
 
 [![GitHub watchers](https://img.shields.io/github/watchers/MaxBonnici/4A_SQR_CI_CD.svg?style=social&label=Watch&maxAge=2592000)](https://GitHub.com/MaxBonnici/4A_SQR_CI_CD/watchers/)
+
+![GitHub watchers](https://github.com/MaxBonnici/4A_SQR_CI_CD/actions/workflows/action.yml/badge.svg)
+![GitHub watchers](https://github.com/MaxBonnici/4A_SQR_CI_CD/actions/workflows/execute_main_py.yml/badge.svg)
+![GitHub watchers](https://github.com/MaxBonnici/4A_SQR_CI_CD/actions/workflows/show_moon.yml/badge.svg)
