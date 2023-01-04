@@ -5,9 +5,9 @@
 
 Nous sommes [Max Bonnici](https://github.com/MaxBonnici), [Doug](https://github.com/DoganKaptan) et [Anis Mouniym](https://github.com/AnisMouniym)
 
-<div style="display: flex; flex_direction: row;">
-<img centering src="https://user-images.githubusercontent.com/95021980/210582471-8ddd094d-ac9d-4e56-8dad-29d0fd7e7058.png" width="100" height="100" />
-<a href="twitch.tv/esicast"><img src="https://user-images.githubusercontent.com/95011291/210586766-d2a52a72-45c3-480d-9545-15d152e0efc8.png" width="100" height="100"><a />
+<div centering style="display: flex; flex_direction: row;  margin-left: auto;">
+<img src="https://user-images.githubusercontent.com/95021980/210582471-8ddd094d-ac9d-4e56-8dad-29d0fd7e7058.png" width="100" height="100" />
+<a href="https://www.youtube.com/@esicast"><img src="https://user-images.githubusercontent.com/95011291/210586766-d2a52a72-45c3-480d-9545-15d152e0efc8.png" width="100" height="100"><a />
 <div />
 
 
