@@ -1,6 +1,6 @@
 # 4A_SQR_CI_CD
 
-##Présentation
+## Présentation
 
 Nous sommes [Max Bonnici](https://github.com/MaxBonnici), [Doug](https://github.com/DoganKaptan) et [Anis Mouniym](https://github.com/AnisMouniym)
 
