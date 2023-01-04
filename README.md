@@ -9,4 +9,4 @@ Nous sommes [Max Bonnici](https://github.com/MaxBonnici), [Doug](https://github.
 
 # Status actions
 
-[![GitHub watchers](https://img.shields.io/github/watchers/Naereen/StrapDown.js.svg?style=social&label=Watch&maxAge=2592000)](https://GitHub.com/Naereen/StrapDown.js/watchers/)
+[![GitHub watchers](https://img.shields.io/github/watchers/Naereen/StrapDown.js.svg?style=social&label=Watch&maxAge=2592000)](https://github.com/MaxBonnici/4A_SQR_CI_CD/watchers/)
