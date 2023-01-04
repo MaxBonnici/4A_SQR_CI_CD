@@ -3,7 +3,7 @@
 
 ## Présentation
 
-Nous sommes [Max Bonnici](https://github.com/MaxBonnici), [Doug](https://github.com/DoganKaptan) et [Anis Mouniym](https://github.com/AnisMouniym)
+Nous sommes [Max Bonnicci](https://github.com/MaxBonnici), [Doug](https://github.com/DoganKaptan) et [Anis Mouniym](https://github.com/AnisMouniym)
 
 <div centering style="display: flex; flex_direction: row;  margin-left: auto;">
 <img src="https://user-images.githubusercontent.com/95021980/210582471-8ddd094d-ac9d-4e56-8dad-29d0fd7e7058.png" width="100" height="100" />
