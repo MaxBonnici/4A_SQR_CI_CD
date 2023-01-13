@@ -1,0 +1,19 @@
+// automatisation lorqu'on build l'application
+
+name: BUILD 
+on:
+  push:
+    branches: [ master ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    
+      cd
+    
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Build
+      run: |
+        # commands to build your application
+        make build
