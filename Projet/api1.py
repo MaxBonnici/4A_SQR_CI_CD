@@ -19,5 +19,12 @@ def add_trans(transaction):
                 transactions[len(transactions)] = transaction
                 return "You just had " + transaction + " to your transactions !"
 
+#E2 Afficher une liste de toutes les transactions dans l’ordre chronologique
+@app.route('/transactions', methods=['GET'])
+def get_trans():
+        if request.method == 'GET':
+                return str(transactions)
+
+
 if __name__ == '__main__':
     app.run(debug=True)
