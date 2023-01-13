@@ -21,4 +21,4 @@ jobs:
       
       # Execute main.py
       - name: Execute main.py
-        run: python main.py
+        run: python api1.py check_syntax
