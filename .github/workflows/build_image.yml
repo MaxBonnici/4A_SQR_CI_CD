@@ -1,0 +1,14 @@
+name: Création image Docker
+
+on: workflow_dispatch
+
+jobs:
+
+  build:
+  
+    runs-on: ubuntu-latest
+      
+    steps:
+    
+    - uses: actions/checkout@v3
+    - run: docker build -t api-image .
