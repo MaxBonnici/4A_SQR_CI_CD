@@ -30,7 +30,8 @@ Nous avons choisis le sujet guidé n'étant pas des experts en création d'API n
 
 Objectif : Utilisation du langage Python pour créer une API Flask pour gérer un système de transaction avec de la gestion CRUD (Create Read Update Delete) 
 * Réalisation d'une première version de l'API REST
-Commande :
+  
+Commande CURL:
 
 E1: 
 ````
