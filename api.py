@@ -1,6 +1,7 @@
 from flask import Flask, request
 from datetime import datetime
 import time
+import pandas as pd
 app = Flask(__name__)
 
 transactions = []
@@ -59,6 +60,13 @@ def get_balance(person):
             if t['sender'] == person:
                 balance -= int(t['amount'])
         return str(balance)
+
+#E5 Importer des données depuis un fichier csv (Ne marche pas)
+@app.route("/import", methods=['GET'])
+def load_transactions():
+    transactions_df = pd.read_csv('transactions.csv')
+    transactions = transactions_df.to_dict('records')
+    return transactions
 
 if __name__ == '__main__':
     app.run(debug=True)
