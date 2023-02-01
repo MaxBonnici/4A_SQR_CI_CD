@@ -1,5 +1,15 @@
-print("Hello there !")
+from flask import Flask, request
 
-print("Moon !")
+app = Flask(__name__)
 
-print("Max Anis Doug = MAD")
+transactions = dict()
+
+#Landing page
+@app.route("/", methods=['GET'])
+def hello_world():
+	ret = "Hello, World !"
+	if request.method == 'GET':
+		return ret
+
+if __name__ == '__main__':
+    app.run(debug=True)
