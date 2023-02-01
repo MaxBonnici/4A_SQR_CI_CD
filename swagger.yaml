@@ -1,0 +1,56 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: Transaction API
+  description: API pour enregistrer des transactions
+
+paths:
+  /add_transaction/:
+    post:
+      summary: Enregistrer une transaction
+      parameters:
+        - name: sender
+          in: formData
+          type: string
+          required: true
+        - name: receiver
+          in: formData
+          type: string
+          required: true
+        - name: solde
+          in: formData
+          type: string
+          required: true
+      responses:
+        200:
+          description: Successful Operation
+          schema:
+            type: string
+    get:
+      summary: Afficher les transactions enregistrées
+      responses:
+        200:
+          description: Successful Operation
+          schema:
+            type: string
+  /get_transactions/:
+    get:
+      summary: Récupérer la liste des transactions enregistrées
+      responses:
+        200:
+          description: Successful Operation
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                p1:
+                  type: string
+                p2:
+                  type: string
+                time:
+                  type: integer
+                  format: int64
+                solde:
+                  type: string
+
