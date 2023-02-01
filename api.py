@@ -1,5 +1,5 @@
 from flask import Flask, request
-import datetime
+from datetime import datetime
 import time
 app = Flask(__name__)
 
@@ -18,10 +18,10 @@ def hello_world():
 def add_transaction():
 	if request.method == 'POST':
 		transaction = {
-			"sender": request.form["s"],
 			"reicever": request.form["r"],
-			"time": time.mktime(datetime.datetime.strptime(str(request.form["t"]), "%d/%m/%Y").timetuple()),
+			"sender": request.form["s"],
 			"solde": request.form["solde"],
+			"time": request.form["t"],
 		}
 		transactions.append(transaction)
 		return "Vous avez ajoutez " + str(transaction) + " à vos transactions !"
@@ -32,9 +32,10 @@ def add_transaction():
 @app.route('/transactions', methods=['GET'])
 def get_transaction():
 	if request.method == 'GET':
-		sorted_transactions = sorted(transactions, key=lambda d: d['time'], reverse=True)
+		def extract_date(d):
+		            return datetime.strptime(d['time'], '%d/%m/%Y')
+		sorted_transactions = sorted(transactions, key=extract_date)
 		return sorted_transactions
-
 
 if __name__ == '__main__':
     app.run(debug=True)
