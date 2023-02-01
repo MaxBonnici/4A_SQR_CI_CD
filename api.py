@@ -28,6 +28,12 @@ def add_transaction():
 	return "Vous n'avez rien ajoutez pour l'instant !"
 
 
+#E2 Afficher une liste de toutes les transactions dans l’ordre chronologique
+@app.route('/transactions', methods=['GET'])
+def get_transaction():
+	if request.method == 'GET':
+		sorted_transactions = sorted(transactions, key=lambda d: d['time'], reverse=True)
+		return sorted_transactions
 
 
 if __name__ == '__main__':
