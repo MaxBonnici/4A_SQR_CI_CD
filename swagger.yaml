@@ -1,6 +1,6 @@
 swagger: '2.0'
 info:
-  version: '1.0'
+  version: '1.5'
   title: Transaction API
   description: API pour enregistrer des transactions
 
@@ -8,6 +8,8 @@ paths:
   /add_transaction/:
     post:
       summary: Enregistrer une transaction
+      consumes:
+        - application/x-www-form-urlencoded
       parameters:
         - name: sender
           in: formData
@@ -53,4 +55,28 @@ paths:
                   format: int64
                 solde:
                   type: string
-
+  /transactions/{person}:
+    get:
+      summary: Afficher une liste des transactions liées à une personne en ordre chronologique
+      parameters:
+        - name: person
+          in: path
+          type: string
+          required: true
+      responses:
+        200:
+          description: Successful Operation
+          schema:
+            type: array
+            items:
+              type: object
+              properties:
+                p1:
+                  type: string
+                p2:
+                  type: string
+                time:
+                  type: string
+                  format: date-time
+                solde:
+                  type: string
