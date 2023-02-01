@@ -20,7 +20,7 @@ def add_transaction():
 		transaction = {
 			"receiver": request.form["r"],
 			"sender": request.form["s"],
-			"somme": request.form["somme"],
+			"amount": request.form["amount"],
 			"time": request.form["t"],
 		}
 		transactions.append(transaction)
@@ -47,6 +47,18 @@ def get_person_transactions(person):
 		sorted_transactions = sorted(person_transactions, key=extract_date)
 		return sorted_transactions
 
+#E4 Afficher le solde du compte de la personne.
+@app.route('/balance/<person>', methods=['GET'])
+def get_balance(person):
+    if request.method == 'GET':
+        person_transactions = [t for t in transactions if t['receiver'] == person or t['sender'] == person]
+        balance = 0
+        for t in person_transactions:
+            if t['receiver'] == person:
+                balance += int(t['amount'])
+            if t['sender'] == person:
+                balance -= int(t['amount'])
+        return str(balance)
 
 if __name__ == '__main__':
     app.run(debug=True)
