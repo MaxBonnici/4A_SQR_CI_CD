@@ -3,7 +3,7 @@ import datetime
 import time
 app = Flask(__name__)
 
-transactions = dict()
+transactions = []
 
 #Landing page
 @app.route("/", methods=['GET'])
@@ -23,15 +23,11 @@ def add_transaction():
 			"time": time.mktime(datetime.datetime.strptime(str(request.form["t"]), "%d/%m/%Y").timetuple()),
 			"solde": request.form["solde"],
 		}
+		transactions.append(transaction)
 		return "Vous avez ajoutez " + str(transaction) + " à vos transactions !"
 	return "Vous n'avez rien ajoutez pour l'instant !"
 
 
-#E2 Afficher une liste de toutes les transactions dans l’ordre chronologique
-@app.route('/transactions', methods=['GET'])
-def get_transaction():
-	if request.method == 'GET':
-		return transactions.sort()
 
 
 if __name__ == '__main__':
