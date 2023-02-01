@@ -62,7 +62,6 @@ curl -X GET http://localhost:5000/balance/"<person>"
 ![GitHub watchers](https://github.com/MaxBonnici/4A_SQR_CI_CD/actions/workflows/build_and_push.yml/badge.svg)  
 ![GitHub watchers](https://github.com/MaxBonnici/4A_SQR_CI_CD/actions/workflows/build_image.yml/badge.svg) 
   
-### Déploiement de la publication automatique des nouvelles version dans un registre de conteneur Google
 
 
 
