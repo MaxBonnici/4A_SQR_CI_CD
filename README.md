@@ -40,7 +40,7 @@ curl -X GET http://localhost:5000/transactions/"
 ````
 E2:
 ````
-curl -d "r=<receiver>&s=<sender>&somme=<somme>&t=<jour/mois/année>" POST http://localhost:5000/add_transaction/
+curl -d "r=<receiver>&s=<sender>&amount=<amount>&t=<jour/mois/année>" POST http://localhost:5000/add_transaction/
 ````
 E3:
 ````
@@ -54,7 +54,7 @@ curl -X GET http://localhost:5000/balance/"<person>"
 
 ### Documentation de l'API à l'aide du fichier README et Swagger
   
-  
+  [Swagger](swagger.yaml)
   
 ### Création de github actions
 
