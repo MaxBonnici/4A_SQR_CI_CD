@@ -11,5 +11,16 @@ def hello_world():
 	if request.method == 'GET':
 		return ret
 
+
+#E1 Enregistrer une transaction
+@app.route('/transactions/<transaction>', methods=['POST'])
+def add_trans(transaction):
+        ret = "Transaction"
+        if request.method == 'POST':
+                transactions[len(transactions)] = transaction
+                return "You just had " + transaction + " to your transactions !"
+
+
+
 if __name__ == '__main__':
     app.run(debug=True)
