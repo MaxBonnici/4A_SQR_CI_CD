@@ -18,9 +18,9 @@ def hello_world():
 def add_transaction():
 	if request.method == 'POST':
 		transaction = {
-			"reicever": request.form["r"],
+			"receiver": request.form["r"],
 			"sender": request.form["s"],
-			"solde": request.form["solde"],
+			"somme": request.form["somme"],
 			"time": request.form["t"],
 		}
 		transactions.append(transaction)
@@ -36,6 +36,17 @@ def get_transaction():
 		            return datetime.strptime(d['time'], '%d/%m/%Y')
 		sorted_transactions = sorted(transactions, key=extract_date)
 		return sorted_transactions
+
+#E3 Afficher une liste des transactions dans l’ordre chronologique liées à une personne.
+@app.route('/transactions/<person>', methods=['GET'])
+def get_person_transactions(person):
+	if request.method == 'GET':
+		person_transactions = [t for t in transactions if t['receiver'] == person or t['sender'] == person]
+		def extract_date(d):
+			return datetime.strptime(d['time'], '%d/%m/%Y')
+		sorted_transactions = sorted(person_transactions, key=extract_date)
+		return sorted_transactions
+
 
 if __name__ == '__main__':
     app.run(debug=True)
