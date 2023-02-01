@@ -40,7 +40,7 @@ curl -X GET http://localhost:5000/transactions/"
 ````
 E2:
 ````
-curl -d "r=<receiver>&s=<sender>&solde=<solde>&t=<jour/mois/année>" POST http://localhost:5000/add_transaction/
+curl -d "r=<receiver>&s=<sender>&somme=<somme>&t=<jour/mois/année>" POST http://localhost:5000/add_transaction/
 ````
 E3:
 ````
