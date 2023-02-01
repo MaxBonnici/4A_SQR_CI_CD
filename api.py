@@ -1,8 +1,9 @@
 from flask import Flask, request
-from datetime import datetime
+import datetime
+import time
 app = Flask(__name__)
 
-transactions = []
+transactions = dict()
 
 #Landing page
 @app.route("/", methods=['GET'])
@@ -17,14 +18,20 @@ def hello_world():
 def add_transaction():
 	if request.method == 'POST':
 		transaction = {
-			"p1": request.form["sender"],
-			"p2": request.form["receiver"],
-			"time": datetime(2023,1,1).timestamp(),
+			"sender": request.form["s"],
+			"reicever": request.form["r"],
+			"time": time.mktime(datetime.datetime.strptime(str(request.form["t"]), "%d/%m/%Y").timetuple()),
 			"solde": request.form["solde"],
 		}
 		return "Vous avez ajoutez " + str(transaction) + " à vos transactions !"
 	return "Vous n'avez rien ajoutez pour l'instant !"
 
+
+#E2 Afficher une liste de toutes les transactions dans l’ordre chronologique
+@app.route('/transactions', methods=['GET'])
+def get_transaction():
+	if request.method == 'GET':
+		return transactions.sort()
 
 
 if __name__ == '__main__':
