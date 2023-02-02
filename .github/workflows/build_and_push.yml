@@ -1,5 +1,4 @@
-name: Build and push API image dans un registre de
-conteneur Google GCR
+name: Build and push API image dans un registre de conteneur Google GCR
 
 on:
     push:
