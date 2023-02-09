@@ -13,6 +13,9 @@
 
 Nous sommes [Max Bonnici](https://github.com/MaxBonnici), [Doğan Kaptan](https://github.com/DoganKaptan) et [Anis Mouniym](https://github.com/AnisMouniym)
 
+[![Project Completed](https://img.shields.io/badge/Project-Completed-green.svg)](https://github.com/MaxBonnici/4A_SQR_CI_CD)
+
+
 
 ## Langage utilisé
 
